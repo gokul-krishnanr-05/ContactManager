@@ -1,22 +1,26 @@
-December 24:
+December 24: done **
 
 Set up the backend project structure.
 Install necessary backend dependencies (Express, Mongoose, etc.).
 Create an Express server and set up a basic test route.
-December 25:
 
-Connect the backend to MongoDB using Mongoose.
+December 25: done **
+
+Connect the backend to MongoDB using Mongoose. 
 Create the schema for contacts (name, email, phone, address).
 Implement the route to fetch all contacts from the database.
-December 26:
+
+December 26:done **
 
 Implement the functionality to add a new contact.
-Set up validation for the form.
 Implement the route to update contact information.
-December 27:
+
+December 27:done **
+
 
 Implement the functionality to delete a contact.
 Test all backend routes using Postman.
+
 December 28:
 
 Set up the React frontend project.

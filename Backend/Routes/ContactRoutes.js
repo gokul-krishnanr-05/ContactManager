@@ -60,8 +60,8 @@ router.put('/contact/:id', async(req, res)=>{
 //deleting a contact
 router.delete('/contact/:id', async(req, res)=>{
     try{
-       const ContctD= await Cmodel.findByIdAndDelete(req.params.id)
-        if(!ContctD){
+       const ContactDelete= await Cmodel.findByIdAndDelete(req.params.id)
+        if(!ContactDelete){
             return res.status(404).json({message: 'Contact not found'})
         }
         res.json({message:"Contact Deleted Successfully"})

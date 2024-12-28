@@ -6,6 +6,7 @@ import "font-awesome/css/font-awesome.min.css";
 
 const Home = () => {
   return (
+    <div className="cont1">
     <div className="container1">
       <div className="sidebar">
         <header className="header">
@@ -17,14 +18,15 @@ const Home = () => {
         <nav className="nav">
           <ul>
             <li>
+            <Link to="/add">
+                <i className="fa fa-plus-circle"></i>
+                Add Contacts
+              </Link>
               <Link to="/contact">
                 <i className="fa fa-address-book"></i>
                 View Contacts
               </Link>
-              <Link to="/contact">
-                <i className="fa fa-plus-circle"></i>
-                Add Contacts
-              </Link>
+              
               <Link to="/contact">
                 <i className="fa fa-users"></i>
                 Group Contacts
@@ -51,6 +53,7 @@ const Home = () => {
           </ul>
         </section>
       </div>
+    </div>
     </div>
   );
 };

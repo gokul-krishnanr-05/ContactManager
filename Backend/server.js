@@ -1,16 +1,20 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-require('dotenv').config()
-const cors=require('cors');
+require("dotenv").config();
+const cors = require("cors");
+const corsOptions = {
+  origin: "http://localhost:3000",
+};
+app.use(cors(corsOptions));
 
-mongoose.connect(process.env.DB_URI)
-.then(()=>console.log("Connected to Database"))
-.catch(err=>console.error(err))
+mongoose
+  .connect(process.env.DB_URI)
+  .then(() => console.log("Connected to Database"))
+  .catch((err) => console.error(err)); 
 
-
-const ContactRouter = require('../Backend/Routes/ContactRoutes');
-app.use('/api',ContactRouter)
+const ContactRouter = require("../Backend/Routes/ContactRoutes");
+app.use("/api", ContactRouter);
 
 const PORT = 5000;
 

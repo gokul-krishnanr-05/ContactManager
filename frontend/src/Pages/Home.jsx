@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
-import "./Home.css";
+import "../styles/Home.css";
 import "font-awesome/css/font-awesome.min.css";
 
 const Home = () => {

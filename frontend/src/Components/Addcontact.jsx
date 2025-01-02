@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import "./AddContact.css";
+import "../styles/AddContact.css";
 
 const AddContact = () => {
   const [Data, setData] = useState({
@@ -41,7 +41,7 @@ const AddContact = () => {
 
   return (
     <div className="cont2">
-      <div className="container">
+      <div className="container2">
         <h1>ADD NEW CONTACT</h1>
 
         {errMessage && <div className="error-message">{errMessage}</div>}

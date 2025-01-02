@@ -1,7 +1,9 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';  
-import Home from './Components/Home';  
+import Home from './Pages/Home';  
 import Addcontact from './Components/Addcontact';  
+
+
 
 const App = () => {
   return (
@@ -10,6 +12,7 @@ const App = () => {
       
         <Route path="/" element={<Home />} />
           <Route path="/add" element={<Addcontact />} />
+          
       </Routes>
     </div>
   );

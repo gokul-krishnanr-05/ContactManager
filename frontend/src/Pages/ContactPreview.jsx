@@ -5,7 +5,6 @@ import "../styles/ContactPreview.css";
 
 const ContactPreview = () => {
   const [contacts, setContacts] = useState([]);
-
   const URL = "http://localhost:5000/api/contact";
 
   useEffect(() => {
@@ -20,12 +19,25 @@ const ContactPreview = () => {
     fetchContacts();
   }, []);
 
+  const handleDeleteContact = async (id) => {
+    try {
+      await axios.delete(`${URL}/${id}`);
+      setContacts(contacts.filter(contact => contact._id !== id));
+    } catch (error) {
+      console.log("Error deleting contact:", error);
+    }
+  };
+
   return (
     <div className="container">
       <h2>Contact List</h2>
       <div className="contactGrid">
         {contacts.map(contact => (
-          <ContactCard  contact={contact} />
+          <ContactCard
+            key={contact._id}
+            contact={contact}
+            onDelete={handleDeleteContact}
+          />
         ))}
       </div>
     </div>

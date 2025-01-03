@@ -14,7 +14,6 @@
 }
 
 .container2 {
-    background-color: rgba(0, 0, 0, 0.6);
     padding: 40px; 
     border-radius: 10px;
     max-width: 700px; 
@@ -27,7 +26,7 @@ h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
     font-weight: 600;
-    color: #b4afaf;
+    color: #ffffff;
 }
 
 .contact-form {
@@ -57,7 +56,7 @@ h1 {
     box-shadow: 0 0 10px rgba(76, 175, 80, 0.6);
 }
 
-.submit-btn {
+.submitBtn {
     padding: 14px;
     background-color: #4CAF50;
     color: white;
@@ -65,12 +64,8 @@ h1 {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-.submit-btn:hover {
-    background-color: #9a5d5d;
-}
 
 .error-message {
     color: #fffbfb;
@@ -82,21 +77,17 @@ h1 {
     border-radius: 5px;
 }
 
-.back-btn {
-    position: absolute;
+.backBtn {
+    position: absolute; 
     top: 20px; 
     left: 20px;
-    padding: 10px 20px;
     background-color: #c2615a;
     color: white;
     font-size: 1.1rem;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-}
-
-.back-btn:hover {
-    background-color: #bc2929;
+    max-width: 100px;
 }
 
 @media (max-width: 768px) {
@@ -109,7 +100,7 @@ h1 {
         font-size: 2.2rem; 
     }
 
-    .field, .submit-btn {
+    .field, .submitBtn {
         font-size: 1.1rem; 
     }
 }
@@ -124,7 +115,7 @@ h1 {
         font-size: 2rem; 
     }
 
-    .field, .submit-btn {
+    .field, .submitBtn {
         font-size: 1rem; 
     }
 }

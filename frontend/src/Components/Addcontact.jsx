@@ -1,8 +1,7 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import "../styles/AddContact.css";
+import styles from "../styles/AddContact.module.css"; 
 
 const AddContact = () => {
   const [Data, setData] = useState({
@@ -16,15 +15,12 @@ const AddContact = () => {
 
   const Url = "http://localhost:5000/api/contact";
 
-
-
   const handleAddContact = async (event) => {
     event.preventDefault();
     try {
       await axios.post(`${Url}`, Data);
       setData({ Name: "", Email: "", Phone: "", Address: "" });
       alert("Contact added successfully");
-     
     } catch (error) {
       console.error("Error adding contact:", error);
       setErrorMessage("Email or Phone Number Already exists.");
@@ -34,76 +30,78 @@ const AddContact = () => {
   const handleinputChange = (e) => {
     setData({ ...Data, [e.target.name]: e.target.value });
   };
+
   const navigate = useNavigate();
-  const handleBack = () => { 
+  const handleBack = () => {
     navigate(-1);
   };
 
   return (
-    <div className="cont2">
-      <div className="container2">
+    <div className={styles.cont2}>
+      <div className={styles.container2}>
         <h1>ADD NEW CONTACT</h1>
 
-        {errMessage && <div className="error-message">{errMessage}</div>}
+        {errMessage && <div className={styles.errorMessage}>{errMessage}</div>}
 
-        <form onSubmit={handleAddContact} className="contact-form">
-          <div className="form-group">
+        <form onSubmit={handleAddContact} className={styles.contactForm}>
+          <div className={styles.formGroup}>
             <input
               type="text"
               name="Name"
               value={Data.Name}
               onChange={handleinputChange}
-              className="field"
+              className={styles.field}
               placeholder="Enter Name"
               required
             />
           </div>
 
-          <div className="form-group">
+          <div className={styles.formGroup}>
             <input
               type="email"
               name="Email"
               value={Data.Email}
               onChange={handleinputChange}
-              className="field"
+              className={styles.field}
               placeholder="Enter Email"
               required
             />
           </div>
 
-          <div className="form-group">
+          <div className={styles.formGroup}>
             <input
               type="text"
               name="Phone"
               value={Data.Phone}
               onChange={handleinputChange}
-              className="field"
+              className={styles.field}
               placeholder="Enter Phone Number"
               required
             />
           </div>
 
-          <div className="form-group">
+          <div className={styles.formGroup}>
             <input
               type="text"
               name="Address"
               value={Data.Address}
               onChange={handleinputChange}
-              className="field"
+              className={styles.field}
               placeholder="Enter Address"
               required
             />
           </div>
 
-          <button type="submit" className="submit-btn">
+          <button type="submit" className={styles.submitBtn}>
             Add Contact
           </button>
         </form>
-        <button onClick={handleBack} className="back-btn">
-         Home
+        <button onClick={handleBack} className={styles.backBtn}>
+          Home
         </button>
       </div>
     </div>
   );
 };
+
 export default AddContact;

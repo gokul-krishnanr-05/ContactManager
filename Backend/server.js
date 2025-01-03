@@ -3,6 +3,8 @@ const app = express();
 const mongoose = require("mongoose");
 require("dotenv").config();
 const cors = require("cors");
+const PORT = process.env.PORT||5000;
+
 const corsOptions = {
   origin: "http://localhost:3000",
 };
@@ -16,7 +18,7 @@ mongoose
 const ContactRouter = require("../Backend/Routes/ContactRoutes");
 app.use("/api", ContactRouter);
 
-const PORT = process.env.PORT||5000;
+
 
 app.listen(PORT, () => {
   console.log(` listening on http://localhost:${PORT}`);

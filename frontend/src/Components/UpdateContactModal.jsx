@@ -31,7 +31,7 @@ const UpdateContactModal = ({contact,onClose, onUpdate}) => {
 
     try {
       await axios.put(
-        `http://localhost:5000/api/contact/${contact._id}`,
+        `https://contactmanager-1-x6vp.onrender.com/api/contact/${contact._id}`,
         updatedContact
       );
       onUpdate(updatedContact);

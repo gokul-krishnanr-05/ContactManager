@@ -13,7 +13,7 @@ const AddContact = () => {
 
   const [errMessage, setErrorMessage] = useState("");
 
-  const Url = "http://localhost:5000/api/contact";
+  const Url = "https://contactmanager-1-x6vp.onrender.com/api/contact";
 
   const handleAddContact = async (event) => {
     event.preventDefault();

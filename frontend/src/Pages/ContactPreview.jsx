@@ -14,7 +14,7 @@ const ContactPreview = () => {
   const [showUpdateModal, setShowUpdateModal] = useState(false);
   const [contactToUpdate, setContactToUpdate] = useState(null);
 
-  const URL = "http://localhost:5000/api/contact";
+  const URL = "https://contactmanager-1-x6vp.onrender.com/api/contact";
 
   useEffect(() => {
     const fetchContacts = async () => {

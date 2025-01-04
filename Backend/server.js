@@ -7,7 +7,10 @@ const PORT = process.env.PORT||5000;
 const corsOptions = {
   origin: "http://localhost:3000",
 };
-app.use(cors(corsOptions));
+const corsOptions1 = {
+  origin: "https://contactmanager-93.netlify.app/",
+};
+app.use(cors(corsOptions1));
 
 mongoose
   .connect(process.env.DB_URI)

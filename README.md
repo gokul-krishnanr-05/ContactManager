@@ -12,7 +12,6 @@ A MERN stack application to manage contacts. This app supports creating, viewing
 
 ---
 
-## Setup
 
 ### Prerequisites
 

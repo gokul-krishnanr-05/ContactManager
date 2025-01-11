@@ -1,7 +1,6 @@
-﻿# Contact Management Application
-  **NAME: GOKUL KRISHNAN R**  
-  **MERN 3**
-
+**NAME: GOKUL KRISHNAN R**  
+ **MERN 3**
+ # Contact Management Application
 A MERN stack application to manage contacts. This app supports creating, viewing, updating, and deleting contacts.
 
 ## Features
